@@ -3,23 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
 }
 
 body {
-    font-family: 'Spartan' sans-serif;
-}
-
-.container {
+    display: flex;
     background-color: hsl(222, 26%, 31%);
-    max-width: 1440px;
-    margin: auto;
-}
-
-.main {
-    max-width: 20rem;
-    margin: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .header {
@@ -39,10 +31,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .right>p {
     color: hsl(0, 0%, 90%);
+    position: absolute;
+    top: 0.9rem;
+    right: 4rem;
+    font-size: 0.7rem;
 }
 
 .switch {
@@ -75,83 +72,77 @@ body {
     cursor: pointer;
 }
 
-.screen {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    color: hsl(0, 0%, 90%);
+.calculator {
+    /* box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0); */
+}
+
+.calculator__display {
     background-color: hsl(224, 36%, 15%);
-    height: 5rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.screen>p {
-    padding-right: 1rem;
-    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    width: 20rem;
+    padding: 0.75rem 1rem;
+    text-align: right;
     font-size: 32px;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    margin-bottom: 0.9rem;
 }
 
-.grid {
+.calculator__keys {
+    background-color: hsl(223, 31%, 20%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-    align-items: center;
-    align-content: center;
-    background-color: hsl(223, 31%, 20%);
-    margin-bottom: 2rem;
+    grid-gap: 0.9rem;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
+    grid-template-areas: ". . . ." "seven eight nine delete" "four five six plus" "one two three minus" "decimal zero divide times" "reset reset equal equal";
 }
 
-.grid>button {
-    /* background-color: hsl(30, 25%, 89%); */
-    /* max-width: 4rem; */
-    height: 3rem;
-    border-radius: 0.5rem;
+button {
+    background: hsl(30, 25%, 89%);
+    box-shadow: 0 0.16rem hsl(28, 16%, 65%);
+    color: hsl(222, 26%, 31%);
     border: none;
-    font-weight: 700;
-    font-size: 20px;
-    box-shadow: 0 0.16rem hsl(224, 28%, 35%);
-}
-
-.grid>button:hover {
-    /* background-color: greenyellow; */
+    border-radius: 0.2rem;
+    height: 2.5rem;
     cursor: pointer;
 }
 
-.num0,
-.num1,
-.num2,
-.num3,
-.num4,
-.num5,
-.num6,
-.num7,
-.num8,
-.num9,
-.period,
+.seven,
+.eight,
+.nine,
+.four,
+.five,
+.six,
+.plus,
+.one,
+.two,
+.three,
+.minus,
+.decimal,
+.zero,
 .divide,
-.sub,
-.add {
-    background-color: hsl(30, 25%, 89%);
+.times {
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.del {
+.delete {
     background-color: hsl(225, 21%, 49%);
     box-shadow: 0 0.16rem hsl(224, 28%, 35%);
+    color: #fff;
 }
 
 .reset {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    color: hsl(0, 0%, 90%);
+    grid-area: reset;
     background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 0.16rem hsl(224, 28%, 35%);
+    color: #fff;
 }
 
 .equal {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    color: hsl(0, 0%, 90%);
-    background-color: hsl(6, 70%, 34%);
+    grid-area: equal;
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 0.16rem hsl(6, 70%, 34%);
+    color: #fff;
 }
