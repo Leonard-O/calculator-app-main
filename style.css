@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spartan' sans-serif;
+}
+
+.container {
+    background-color: hsl(222, 26%, 31%);
+    max-width: 1440px;
+    margin: auto;
+}
+
+.main {
+    max-width: 20rem;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.calc {
+    color: hsl(0, 0%, 90%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right>p {
+    color: hsl(0, 0%, 90%);
+}
+
+.switch {
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.toggle-theme {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 10px;
+    color: hsl(0, 0%, 90%);
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    background-color: hsl(223, 31%, 20%);
+    width: 3rem;
+    height: 1rem;
+    border-radius: 1rem;
+}
+
+.elipse {
+    background-color: hsl(6, 70%, 34%);
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 1rem;
+    margin-left: 0.2rem;
+    cursor: pointer;
+}
+
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: hsl(0, 0%, 90%);
+    background-color: hsl(224, 36%, 15%);
+    height: 5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.screen>p {
+    padding-right: 1rem;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    align-content: center;
+    background-color: hsl(223, 31%, 20%);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.grid>button {
+    /* background-color: hsl(30, 25%, 89%); */
+    /* max-width: 4rem; */
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0 0.16rem hsl(224, 28%, 35%);
+}
+
+.grid>button:hover {
+    /* background-color: greenyellow; */
+    cursor: pointer;
+}
+
+.num0,
+.num1,
+.num2,
+.num3,
+.num4,
+.num5,
+.num6,
+.num7,
+.num8,
+.num9,
+.period,
+.divide,
+.sub,
+.add {
+    background-color: hsl(30, 25%, 89%);
+}
+
+.del {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 0.16rem hsl(224, 28%, 35%);
+}
+
+.reset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: hsl(0, 0%, 90%);
+    background-color: hsl(225, 21%, 49%);
+}
+
+.equal {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    color: hsl(0, 0%, 90%);
+    background-color: hsl(6, 70%, 34%);
+}
